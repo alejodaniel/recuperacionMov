@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Nuevo sitio</ion-title>
+      <ion-buttons start>
+         <button ion-button (click)="closeModal()">
+           <ion-icon name="md-close"></ion-icon>
+         </button> 
+       </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <p>{{lat}}</p>
+    <p>{{lng}}</p>
+
+    <hr/>
+      <form (ngSubmit)="guardarSitio()">
+      <ion-item>
+        <img [src]="foto" *ngIf="foto" />
+        <button ion-button icon-left full type="button" (click)="sacarFoto()">
+          Foto&nbsp;&nbsp;
+          <ion-icon name="camera"></ion-icon>
+        </button>
+        <img [src]="foto" *ngIf="foto" />
+      </ion-item>
+      <hr/>
+      <ion-item>
+        <ion-label>Descripción</ion-label>
+        <ion-textarea [(ngModel)]="description" name="description"></ion-textarea>
+      </ion-item>
+      <button ion-button type="submit" block>Guardar Sitio</button>
+    </form>
+</ion-content>

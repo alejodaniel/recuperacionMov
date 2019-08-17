@@ -1,0 +1,21 @@
+<ion-header style="background: blue">
+  <ion-toolbar style="background: blueviolet">
+    <ion-title style="color: blue">
+    MI LOCALIZACIÓN
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>Latitud: {{lat}}</p>
+  <p>Longitud: {{lon}}</p>
+  <ion-label><b>Tiempo:</b>{{timestamp}} <br><br></ion-label><br />
+</ion-content>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-button (click)="CaptureAudio()">Audio</ion-button><br /> 
+    <ion-button (click)="CaptureImage()">Image</ion-button><br /> 
+    <ion-button (click)="CaptureVideo()">Video</ion-button><br /> 
+  </div>
+</ion-content>

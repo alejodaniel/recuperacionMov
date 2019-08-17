@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="map"></div>
+
+  <ion-fab right top>
+      <button ion-fab (click)="nuevoSitio()">
+        <ion-icon name="pin"></ion-icon>
+        <ion-icon name="add"></ion-icon>
+      </button>
+
+      <p *ngIf="coords">{{coords.lat}}</p>
+      <p *ngIf="coords">{{coords.lng}}</p>
+    </ion-fab>
+
+
+</ion-content>
